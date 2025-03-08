@@ -3,6 +3,7 @@
 #include <math.h>
 #include <stdlib.h>
 
+
 // 2. I didn't quite get it. 
 // Why is the size of s always 8?
 

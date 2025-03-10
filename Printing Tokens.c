@@ -3,8 +3,12 @@
 #include <math.h>
 #include <stdlib.h>
 
-int main() {
 
+// 2. I didn't quite get it. 
+// Why is the size of s always 8?
+
+int main() {
+    
     char *s;
     s = malloc(1024 * sizeof(char));
     scanf("%[^\n]", s);

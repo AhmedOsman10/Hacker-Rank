@@ -23,7 +23,7 @@ int main() {
             if (*(s + y) == numbers[i])
             {
                 count[i]++; 
-                i = 9;
+                break;
             }
         }
          

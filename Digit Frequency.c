@@ -8,7 +8,7 @@ int main() {
     /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
     
     char* numbers = "0123456789";
-    char y = 0;
+    int y = 0;
     char count[10] = {};
     char *s;
     s = malloc(1024 * sizeof(char));
@@ -18,7 +18,7 @@ int main() {
     
     while(y < strlen(s))
     {
-        for(char i=0; i <= 9; i++) // loop for checking the character if it;s equal nay number from 0 to 9
+        for(char i=0; i <= 9; i++) // Loop checking if the entered character is a number from 0 to 9
         {
             if (*(s + y) == numbers[i])
             {
@@ -33,7 +33,7 @@ int main() {
     
     for (int i = 0; i <= 9; i++)
     {
-        printf("%d", count[i]);
+        printf("%d ", count[i]); // Printing the total count of each number from 0 to 9
     }
     return 0;
 }

@@ -10,26 +10,26 @@ int main()
     scanf("%d", &n);
   	// Complete the code to print the pattern.
     
-    int j;
+    int x;
     int k;
     int t;
 
     int* previous_numbers = (int*)malloc(n * sizeof(int)); // This array saves each individual number only once, e.g., 8, 7, .. , 1
-    int size = (2 * n - 1); // The lenght of a single row
+    int size = (2 * n - 1); // The length of a single row
     int* numbers_saver = (int*)malloc(size * n * sizeof(int)); // This array saves all the numbers from row one until the midpoint (at n = 1).
   	int q = 0;
   	
   	// This for loop prints all the numbers from the beginning until the midpoint (at n = 1)
-  	for (int i = n; 1 <= i; i--)
+  	for (int i = n; i >= 1; i--)
   	{
   	    previous_numbers[i-1] = i;
-  	    j = n-i;
+  	    x = n-i;
   	    t = (i * 2) - 1;
   	    k = 1;
   	    
-  	    for(int x = (n * 2) - 1; 0 < x; x--)
+  	    for(int j = (n * 2) - 1; j > 0; j--)
   	    {
-  	        if ( 1 <= j)
+  	        if ( 1 <= x)
   	        {
   	            printf("%d ", previous_numbers[n-k]);
   	            numbers_saver[(q++)] = previous_numbers[n-k];
@@ -51,7 +51,7 @@ int main()
       	        k++;
       	    }
       	    
-      	    j--;
+      	    x--;
   	    }
   
   	    printf("\n");
